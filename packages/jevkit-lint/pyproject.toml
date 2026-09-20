@@ -1,6 +1,6 @@
 [project]
 name = "jevkit-lint"
-version = "0.1.0"
+version = "0.1.1"
 description = "Static linter for TypeSafe Jev questions. Catches the documented jev-1.13 failure modes before you spend a token. No API key required."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -16,7 +16,7 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Quality Assurance",
 ]
-dependencies = ["jevkit-core>=0.1.0"]
+dependencies = ["jevkit-core>=0.2.0"]
 
 [project.scripts]
 jevkit-lint = "jevkit_lint.cli:main"
