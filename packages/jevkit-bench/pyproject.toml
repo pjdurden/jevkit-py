@@ -1,12 +1,12 @@
 [project]
-name = "jevkit-core"
-version = "0.2.0"
-description = "Shared substrate for jevkit: the .jevl record format, canonical request digests, question normalization, and token budgets for TypeSafe's Jev."
+name = "jevkit-bench"
+version = "0.1.0"
+description = "Score a labeled TypeSafe Jev suite for accuracy and cost, and compare two runs. Catches regressions aggregate accuracy hides."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{ name = "Prajjwal Chittori" }]
-keywords = ["jev", "typesafe", "system-one", "llm", "calibration"]
+keywords = ["jev", "typesafe", "system-one", "benchmark", "evaluation", "accuracy", "cost"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -16,7 +16,10 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Testing",
 ]
-dependencies = []
+dependencies = ["jevkit-core>=0.2.0"]
+
+[project.scripts]
+jevkit-bench = "jevkit_bench.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/pjdurden/jevkit-py"
@@ -27,4 +30,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/jevkit_core"]
+packages = ["src/jevkit_bench"]

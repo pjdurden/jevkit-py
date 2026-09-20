@@ -6,6 +6,10 @@ requires-python = ">=3.10"
 dependencies = [
   "jevkit-core",
   "jevkit-lint",
+  "jevkit-pytest",
+  "jevkit-drift",
+  "jevkit-calibrate",
+  "jevkit-bench",
 ]
 
 [tool.uv.workspace]
@@ -14,6 +18,10 @@ members = ["packages/*"]
 [tool.uv.sources]
 jevkit-core = { workspace = true }
 jevkit-lint = { workspace = true }
+jevkit-pytest = { workspace = true }
+jevkit-drift = { workspace = true }
+jevkit-calibrate = { workspace = true }
+jevkit-bench = { workspace = true }
 
 [dependency-groups]
 dev = ["pytest>=8.0", "pytest-cov>=5.0"]
